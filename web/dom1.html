@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="div1">
+
+<p id="t1">A A A</p>
+<p id="t2">A A A</p>
+<p id="t3">A A A</p>
+<p id="t4">A A A</p>
+
+
+</div>
+<hr>
+<br>
+<div>
+<table><tr><td>
+<input type="button" value="add row above" onclick="add()"></td><td>
+<input type="button" value="add row below" onclick="addb()"></td></tr><tr><td>
+<input type="button" value="add Border" onclick="addbor()"></td><td>
+<input type="button" value="Change text color" onclick="changetextcolr()"><td></tr><tr><td>
+<input type="button" value="Remove row" onclick="rem()">
+</td><td>
+<input type="button" value="Remove All" onclick="remall()">
+</td></tr>
+</div>
+<script>
+function add(){
+var para = document.createElement("p");
+var node = document.createTextNode("B B B");
+para.appendChild(node);
+
+var element = document.getElementById("div1");
+var child = document.getElementById("t1");
+element.insertBefore(para,child);
+
+}
+function addb(){
+var para = document.createElement("p");
+var node = document.createTextNode("C C C");
+para.appendChild(node);
+
+var element = document.getElementById("t4");
+element.appendChild(para);
+
+}
+function addbor(){
+document.getElementById("div1").setAttribute("class", "t2"); 
+
+}
+function changetextcolr(){
+document.getElementById("div1").setAttribute("class", "t3"); 
+
+}
+function rem() {
+  var list = document.getElementById("div1");
+  list.removeChild(list.children[0]);
+}
+function remall() {
+  var list = document.getElementById("div1");
+  list.remove();
+}
+</script>
+<style>
+.t2{border: 2px red solid; width:20%;}
+.t3{color:blue;border: 2px red solid;width:20%;}
+input{width:100%;}
+</style>
+</body>
+</html>

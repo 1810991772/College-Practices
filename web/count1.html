@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Count capital letters in JavaScript</title>
+</head>
+<body>
+    Enter some text: <br>
+    <input type="text" id="textbox">
+    
+    <button onclick="count1()">Lowercase</button>
+    <button onclick="count3()">Special</button>
+    
+  <br>
+  
+  <script type="text/javascript">
+    
+    function count1(){
+      var mytext= document.getElementById("textbox").value;
+      var numlower = (mytext.match(/[a-z]/g) || []).length;
+      alert(numlower);
+    }
+    
+    function count3(){
+      var mytext= document.getElementById("textbox").value;
+      var numspl = (mytext.match(/[!@#$%^&*()~]/g) || []).length;
+      alert(numspl);
+    }
+  </script>
+</body>
+</html>

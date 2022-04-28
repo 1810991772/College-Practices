@@ -1,0 +1,61 @@
+array element print scan
+
+<html>
+<head>
+<script>
+	a=new array();
+		n2=0;
+	function abc(){
+		var n=document.getElementById("a").value;
+		var i,x="";
+		n2=n;
+		for(i=0;i<n;i++)
+		{
+			a[i]=prompt("enter Elements to be entered");
+			x=x+a[i]+"";
+		}
+	
+	document.getElementById("p").innerHTML=x;
+    }
+    function rem()
+    {
+       var n1=document.getElementById("b").value;
+       var i,x="";
+       if(n1>n2)
+       {
+       	document.getElementById("p").innerHTML="not enough memory";
+       }	
+       else
+       {
+       	for(i=0;i<n1;i++)
+       	{
+       		var y=prompt('enter element to be removed');
+       		for(var m=0;m<n2;m++)
+       		{
+               if(a[m]==y)
+               {
+                a.splice(m,1);
+       			m--;
+       		    }
+       		}
+       	}
+       	x+=a;
+       	
+       	document.getElementById("p").innerHTML=x;
+       }
+    }
+</script>
+</head>
+<body>
+	<h1>My Array</h1>
+	<table>
+		<tr>
+			<td><input type="number" id="a"></td><td><input type="button" value="Print array" onclick="abc()"></td>
+		</tr>
+			<tr>
+			<td><input type="number" id="b"></td><td><input type="button" value="Remove" onclick="rem()"></td>
+		</tr>
+</table>
+<p id="p"></p>
+</body>
+</html>

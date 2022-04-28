@@ -1,0 +1,68 @@
+<html>
+<head>
+	<title>Arrays!!!</title>
+	<script type="text/javascript">
+		var students = new Array("Aditi", "Navjeet", "Bhavna", "Preeti", "Gamini","Neha","Vandana");
+		
+        function display(){
+        
+		document.write("Students List: <br />");
+		for (i=0;i<students.length;i++){
+				document.write(students[i] + "<br />");
+			}
+        }
+        
+        function n1(){
+		document.write("<br />The number of items in students array is " + students.length + "<br />");
+        }
+        function s1(){
+		document.write("<br />The SORTED students array<br />");
+		students.sort();
+		for (i=0;i<students.length;i++){
+				document.write(students[i] + "<br />");
+			}
+        }
+        
+        function r1(){
+		document.write("<br />The REVERSED students array<br />");
+		students.reverse();
+		for (i=0;i<students.length;i++){
+				document.write(students[i] + "<br />");
+			}
+        }
+        
+        function rm1(){
+		document.write("<br />THE students array after REMOVING the LAST item<br />");
+		students.pop();
+		for (i=0;i<students.length;i++){
+				document.write(students[i] + "<br />");
+			}
+        }
+        
+        function add(){
+        var a=prompt("Enter New element");
+        document.write("<br />THE students array after PUSH<br />");
+        students.push(a);
+		for (i=0;i<students.length;i++){
+				document.write(students[i] + "<br />");
+			}
+        }
+	</script>
+</head>
+<body>
+<hr>
+<br>
+<div>
+<table><tr><td>
+<input type="button" value="Display" onclick="display()"></td><td>
+<input type="button" value="Display Length" onclick="n1()"></td></tr><tr><td>
+<input type="button" value="Sort List" onclick="s1()"></td><td>
+<input type="button" value="Reverse List" onclick="r1()"><td></tr><tr><td>
+<input type="button" value="Remove Last" onclick="rm1()">
+</td><td>
+<input type="button" value="Add New" onclick="add()">
+</td></tr>
+</div>
+
+</body>
+</html>

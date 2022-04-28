@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+	<form name="fname" method="post" onsubmit="return form()" >
+		name:
+	<input type="text" id="a" > <br>
+	password:<input type="password" id="b" ><br>
+	email:<input type="email" id="c" ><br>
+	gender:<input type="radio" name="container">male
+		<input type="radio" name="container">female
+	<select id="e">
+		<option>Please Choose</option>
+	<option>AL</option>
+	<option>CA</option>
+	<option>TX</option>
+	<option>WI</option>
+</select>
+	<input type="submit" value="submit" onclick="radio()" >
+	<input type="reset" value="reset" >
+
+</form>
+<script>
+	function form()
+
+	{
+		var y=document.getElementById("b").value;
+		var x=document.getElementById("a").value;
+		var z=document.getElementById("c").value;
+		var p=document.getElementById("e").value;
+		
+		var r=/^[a-zA-Z]+$/;
+		var s=/^[0-9][a-zA-Z]+$/;
+		var m=/^[\w\-\.\+]+\@[a-zA-Z\.\-]+\.[a-z0-9A-Z]{2,4}$/;
+				if(x == "" || x.length<=1 ||x.length>=30)
+		{
+			alert("please fill valid username");
+
+		return false;
+	}
+	if(y == "" || y.length <=1 ||y.length>=30)
+		{
+			alert("please fill valid password");
+
+		return false;
+	}
+	if(z == "" || z.length <=1 ||z.length>=30)
+		{
+			alert("please fill valid email ID");
+
+		return false;
+	}
+	if(p == "Please Choose")
+{
+	alert("please pick any one");
+return false;
+}
+if(r.exec(x)!=x)
+	{
+alert("invalid username");
+	}
+	if(s.exec(y)!=y)
+	{
+alert("invalid password");
+	}
+if(z.exec(z)!=z)
+	{
+alert("invalid email");
+	}
+}
+function radio(){
+	var i=document.fname.container;
+		for(j=0;j<i.lenght;j++)
+		{
+			if(x1!=1)
+		alert("please choose anyone");
+		return false;
+			
+		}
+
+				var x1=1;
+				return true;
+		
+	}
+}
+
+</script>
+	</body>
+</html>

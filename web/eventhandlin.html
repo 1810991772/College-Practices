@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>FA-3 Coding Question</h2>
+<table border="groove blue 2px">
+<tr>
+<td colspan="2"><p>This example calls a function which performs a calculation, and returns the result:</p></td>
+</tr>
+<tr>
+<td><input type="text" name="hello" id="hllo"></td>
+<td><input type="text" name="hello" id="hllo1"></td>
+</tr>
+<tr>
+<td>This is written in <p id="demo">paragraph</p></td>
+<td><button onclick="myFunction()">Adding image and changing pic size</button></td><br/>
+<tr>
+<td>
+<button onmouseover="my1()" onmouseout="my2()">You want to change the text</button></td></tr><br/>
+<img src="" id="pqr">
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "FA-3";
+  document.getElementById("pqr").src = "https://res.cloudinary.com/demo/image/upload/fl_lossy/kitten_fighting.gif";
+  document.getElementById("demo").style.fontSize="50px";
+  document.getElementById("demo").style.color="pink";
+  }
+  function my1() {
+  document.getElementById("demo").innerHTML = "Yeah!! text changes with calculation ";
+  document.getElementById("hllo").style.display="none";
+   document.getElementById("hllo1").style.display="none";
+  document.getElementById("demo").style.color="pink";
+  }
+  function my2() {
+  
+  document.getElementById("hllo").style.display="block";
+   document.getElementById("hllo1").style.display="block";
+  document.getElementById("demo").style.color="";
+   document.getElementById("demo").innerHTML = "paragraph";
+     document.getElementById("demo").style.fontSize="";
+  }
+</script>
+</table>
+</body>
+</html>

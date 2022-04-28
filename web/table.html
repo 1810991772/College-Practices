@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<input type="button" value="create table" onclick="table()" >
+<script>
+	function table()
+	{
+		var row=prompt("enter rows");
+		var cols=prompt("enter coloumns");
+		var i=1;
+		var j=1;
+		var output = "<table border='1'>";
+		for(i=1;i<=row;i++)
+		{
+			
+			output = output+"<tr>";
+			while(j<=cols)
+			{
+				output = output+"<td>" +i+ "</td>";
+				j=j+1;
+			}
+			output = output+"</tr>";
+			j=1;
+		}
+	output= output +"</table>";
+	document.write(output);
+	}
+</script>
+</body>
+</html>

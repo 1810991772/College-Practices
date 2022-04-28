@@ -1,0 +1,40 @@
+DOM
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<ul id="aa">
+	<li>coffee</li>
+	<li>tea</li>
+	<li>milk</li>
+</ul>
+<input type="button" value="ADD" onclick="add()">
+<input type="button" value="REMOVE" onclick="rem()">
+<input type="button" value="INSRT BEFORE" onclick="inst()">
+<input type="button" value="REPLACE" onclick="replace()">
+<script>
+	function add()
+	{
+		var a=document.createElement("li");
+		a.textContent="water";
+		var list=document.getElementById("aa");
+		list.insertBefore(a,list.childNodes[4]);
+	}
+	function rem()
+	{
+		var rem=document.getElementById("aa");
+		rem.removeChild(rem.lastElementChild);
+	}
+	function replace()
+	{
+		var a=document.createElement("li");
+		a.textContent="water";
+		var list=document.getElementById("aa");
+		list.replaceChild(a,list.firstElementChild);
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,486 @@
+BOOTSTRAP :
+
+Definition:
+Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first websites.
+
+What is Bootstrap?
+Bootstrap is a free front-end framework for faster and easier web development
+Bootstrap includes HTML and CSS based design templates for typography, forms, buttons, tables, navigation, modals, image carousels and many other, as well as optional JavaScript plugins
+Bootstrap also gives you the ability to easily create responsive designs
+
+
+Why Use Bootstrap?
+Advantages of Bootstrap:
+
+Easy to use: Anybody with just basic knowledge of HTML and CSS can start using Bootstrap
+Responsive features: Bootstrap's responsive CSS adjusts to phones, tablets, and desktops
+Mobile-first approach: In Bootstrap 3, mobile-first styles are part of the core framework
+Browser compatibility: Bootstrap is compatible with all modern browsers (Chrome, Firefox, Internet Explorer, Edge, Safari, and Opera)
+Where to Get Bootstrap?
+There are two ways to start using Bootstrap on your own web site.
+
+You can:
+
+Download Bootstrap from getbootstrap.com
+
+
+Syntax:
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+There are two container classes to choose from:
+
+The .container class provides a responsive fixed width container
+The .container-fluid class provides a full width container, spanning the entire width of the viewport.
+
+
+bootstrap grid:
+
+whenever you use grid system it has four different classes.
+xs(extra small) (for phones - screens less than 768px wide)
+sm (small) (for tablets - screens equal to or greater than 768px wide)
+md (medium) (for small laptops - screens equal to or greater than 992px wide)
+lg (large) (for laptops and desktops - screens equal to or greater than 1200px wide)
+whenever we use bootstrap we can have up to 12 coloumns if we want to change the pattern then we can change the grid pattern by group in the remaining one.
+
+
+bootstrap has default size
+:
+small
+mark
+abbr
+blockquote
+del
+code
+kbd 
+pre
+  
+
+bootstrap tables :
+1. stripped table
+2. context table
+3. border table
+
+now here the generic class would be table.in this table you can have bunch of rows and in these rows you can make cols.
+
+Contextual Classes
+muted
+primary
+Default	
+Success	
+Danger	
+Info	
+Warning	
+Active
+
+
+
+Bootstrap Images:
+1.Rounded Corners
+The .img-rounded class adds rounded corners to an image (IE8 does not support rounded corners):
+
+Example
+<img src="cinqueterre.jpg" class="img-rounded" alt="Cinque Terre">
+
+2.Circle
+The .img-circle class shapes the image to a circle (IE8 does not support rounded corners):
+
+
+Example
+<img src="cinqueterre.jpg" class="img-circle" alt="Cinque Terre">
+
+3.Thumbnail
+The .img-thumbnail class shapes the image to a thumbnail:
+
+
+
+Example
+<img src="cinqueterre.jpg" class="img-thumbnail" alt="Cinque Terre">
+
+for alignning:
+1.<img src="" align="float-left">
+2.align="float-right"
+3.class="mx-auto d-block" :give auto/adjust margin and come image to center
+4.responsive images:
+class="img-fluid"
+
+Bootstrap Jumbotron :
+
+A jumbotron indicates a big box for calling extra attention to some special content or information.
+
+Example
+<div class="container">
+  <div class="jumbotron">
+    <h1>Bootstrap Tutorial</h1>
+    <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing
+    responsive, mobile-first projects on the web.</p>
+  </div>
+  <p>This is some text.</p>
+  <p>This is another text.</p>
+</div>
+
+A jumbotron is displayed as a grey box with rounded corners. It also enlarges the font sizes of the text inside it.
+
+Bootstrap Wells
+Wells
+The .well class adds a rounded border around an element with a gray background color and some padding:
+
+Example
+<div class="well">Basic Well</div>
+
+
+Well Size:
+Small Well
+Normal Well
+Large Well
+Change the size of the well by adding the .well-sm class for small wells or  .well-lg class for large wells:
+
+Example
+<div class="well well-sm">Small Well</div>
+<div class="well well-lg">Large Well</div>
+
+ALERTS:
+
+
+Alerts are created with the .alert class, followed by one of the four contextual classes .alert-success, .alert-info, .alert-warning or .alert-danger:
+Example
+<div class="alert alert-success">
+  <strong>Success!</strong> Indicates a successful or positive action.
+</div>
+
+<div class="alert alert-info">
+  <strong>Info!</strong> Indicates a neutral informative change or action.
+</div>
+
+<div class="alert alert-warning">
+  <strong>Warning!</strong> Indicates a warning that might need attention.
+</div>
+
+<div class="alert alert-danger">
+  <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+</div>
+
+if you want to remove data in p or div tag (same as that done by hide ,remove,empty functions in jquery)
+sol:class="data dismissable"
+example:
+
+<div class="alert alert-success alert-dismissable">
+<p>pqr</p>
+<button class="close" data-dismiss="alert">
+Animated Alerts
+×Click on the "x" symbol to the right to close me. I will "fade" out.
+The .fade and .in classes adds a fading effect when closing the alert message:
+
+Example
+<div class="alert alert-danger fade in">
+
+Bootstrap Buttons:::
+
+
+
+
+Button Styles
+Bootstrap provides different styles of buttons:
+
+       
+
+To achieve the button styles above, Bootstrap has the following classes:
+
+.btn
+.btn-default
+.btn-primary
+.btn-success
+.btn-info
+.btn-warning
+.btn-danger
+.btn-link
+The following example shows the code for the different button styles:
+
+Example
+<button type="button" class="btn">Basic</button>
+<button type="button" class="btn btn-default">Default</button>
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-link">Link</button>
+The button classes can be used on an <a>, <button>, or <input> element:
+
+Example
+<a href="#" class="btn btn-info" role="button">Link Button</a>
+<button type="button" class="btn btn-info">Button</button>
+<input type="button" class="btn btn-info" value="Input Button">
+<input type="submit" class="btn btn-info" value="Submit Button">
+Why do we put a # in the href attribute of the link?
+
+Since we do not have any page to link it to, and we do not want to get a "404" message, we put # as the link in our examples. It should be a real URL to a specific page.
+
+
+Button Sizes
+Bootstrap provides four button sizes:
+
+   
+
+The classes that define the different sizes are:
+
+.btn-lg
+.btn-sm
+.btn-xs
+The following example shows the code for different button sizes:
+
+Example
+<button type="button" class="btn btn-primary btn-lg">Large</button>
+<button type="button" class="btn btn-primary">Normal</button>
+<button type="button" class="btn btn-primary btn-sm">Small</button>
+<button type="button" class="btn btn-primary btn-xs">XSmall</button>
+Block Level Buttons
+A block level button spans the entire width of the parent element.
+
+Add class .btn-block to create a block level button:
+
+Example
+<button type="button" class="btn btn-primary btn-block">Button 1</button>
+Active/Disabled Buttons
+A button can be set to an active (appear pressed) or a disabled (unclickable) state:
+
+ 
+
+The class .active makes a button appear pressed, and the class .disabled makes a button unclickable:
+
+Example
+<button type="button" class="btn btn-primary active">Active Primary</button>
+<button type="button" class="btn btn-primary disabled">Disabled Primary</button>
+
+
+
+Badges:
+Badges are numerical indicators of how many items are associated with a link:
+badges are used to add additional information to any content.
+Example:
+<a href="#">News <span class="badge">5</span></a><br>
+
+The following example shows how to add badges to buttons:
+
+Example
+<button type="button" class="btn btn-primary">Primary <span class="badge">7</span></button>
+
+
+Bootstrap Progress Bars
+Basic Progress Bar
+A progress bar can be used to show a user how far along he/she is in a process.
+
+Bootstrap provides several types of progress bars.
+
+A default progress bar in Bootstrap looks like this:
+
+70% Complete
+To create a default progress bar, add a .progress class to a <div> element:
+
+Example
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="70"
+  aria-valuemin="0" aria-valuemax="100" style="width:70%">
+    <span class="sr-only">70% Complete</span>
+  </div>
+</div>
+
+
+Spinners :
+ class ="spinner-border"
+example:
+
+<div class="spinner-grow text-primary bg-success"
+
+
+Navbar::::
+
+
+remove the navbar expand to align vertically.stacks the navbar verticaLLY on the screen .
+
+when using the navbar brand class or image bootstrap 4 will automatically style the image to fit the navbar.
+
+3/3/2020
+
+BS Media Objects:
+
+mt=margin top
+mr=margin right
+syntax:
+mt-3
+we also use 
+similarly for padding 
+pt-3
+
+note :value is between 0-6
+ now for body/text
+use
+div class="media-body"
+for nested use
+div class="media"
+<div class="media -body">
+</div></div>
+<div class="media">
+<div class="media -body">
+</div></div>
+
+to align image or data use 
+syntax:class="align-self-start"
+                          center"
+                          end"
+
+
+modal:
+modals are widely used to warn user for situation like seesion time-out or to recieve final confirmation before
+going to any critical action such as saving and deleting important data.
+
+
+classes for models:
+modal
+modal-header
+modal-dialog
+modal-content
+modal-footer
+
+for size
+use:modal-sm
+         -lg
+         -xl
+         -md
+
+modal dialog at center position
+
+syntax:
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+  Open modal
+</button
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Modal body..
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div> 
+
+
+
+
+4/3/2020
+
+Bootstrap 4 Scrollspy
+Scrollspy is used to automatically update links in a navigation list based on scroll position.
+scrollspy is used to  indicate active linksin the next based on scroll position.
+
+<!-- The scrollable area -->
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<!-- The navbar - The <a> elements are used to jump to a section in the scrollable area -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+...
+  <ul class="navbar-nav">
+    <li><a href="#section1">Section 1</a></li>
+    ...
+</nav>
+
+<!-- Section 1 -->
+<div id="section1">
+  <h1>Section 1</h1>
+  <p>Try to scroll this page and look at the navigation bar while scrolling!</p>
+</div>
+...
+
+</body>
+
+Bootstrap 4 Tooltip
+The Tooltip component is small pop-up box that appears when the user moves the mouse pointer over an element:
+
+How To Create a Tooltip
+To create a tooltip, add the data-toggle="tooltip" attribute to an element.
+
+Use the title attribute to specify the text that should be displayed inside the tooltip:
+
+<a href="#" data-toggle="tooltip" title="Hooray!">Hover over me</a>
+
+Note: Tooltips must be initialized with jQuery: select the specified element and call the tooltip() method.
+
+The following code will enable all tooltips in the document:
+
+Example
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+Positioning Tooltips
+By default, the tooltip will appear on top of the element.
+
+Use the data-placement attribute to set the position of the tooltip on top, bottom, left or the right side of the element:
+
+Example
+<a href="#" data-toggle="tooltip" data-placement="top" title="Hooray!">Hover</a>
+<a href="#" data-toggle="tooltip" data-placement="bottom" title="Hooray!">Hover</a>
+<a href="#" data-toggle="tooltip" data-placement="left" title="Hooray!">Hover</a>
+<a href="#" data-toggle="tooltip" data-placement="right" title="Hooray!">Hover</a>
+
+Bootstrap 4 Popover
+The Popover component is similar to tooltips; it is a pop-up box that appears when the user clicks on an element. The difference is that the popover can contain much more content.
+
+How To Create a Popover
+To create a popover, add the data-toggle="popover" attribute to an element.
+
+Use the title attribute to specify the header text of the popover, and use the data-content attribute to specify the text that should be displayed inside the popover's body:
+
+<a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a>
+Note: Popovers must be initialized with jQuery: select the specified element and call the popover() method.
+
+The following code will enable all popovers in the document:
+
+Example
+<script>
+$(document).ready(function(){
+  $('[data-toggle="popover"]').popover();
+});
+</script>
+
+Positioning Popovers
+By default, the popover will appear on the right side of the element.
+
+Use the data-placement attribute to set the position of the popover on top, bottom, left or the right side of the element:
+
+Example
+<a href="#" title="Header" data-toggle="popover" data-placement="top" data-content="Content">Click</a>
+<a href="#" title="Header" data-toggle="popover" data-placement="bottom" data-content="Content">Click</a>
+<a href="#" title="Header" data-toggle="popover" data-placement="left" data-content="Content">Click</a>
+<a href="#" title="Header" data-toggle="popover" data-placement="right" data-content="Content">Click</a>
+
+Closing Popovers
+By default, the popover is closed when you click on the element again. However, you can use the data-trigger="focus" attribute which will close the popover when clicking outside the element:
+
+Example
+<a href="#" title="Dismissible popover" data-toggle="popover" data-trigger="focus" data-content="Click anywhere in the document to close this popover">Click me</a>
+Tip: If you want the popover to be displayed when you move the mouse pointer over the element, use the data-trigger attribute with a value of "hover":
+
+Example
+<a href="#" title="Header" data-toggle="popover" data-trigger="hover" data-content="Some content">Hover over me</a>

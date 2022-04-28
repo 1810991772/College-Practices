@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#c").click(function(){
+    $("#qq").hide();
+  });
+$("#d").click(function(){
+    $("*#f1").css ("background-color","red")
+  });
+$("#e").click(function(){
+    $("*#f2").css ("background-color","gold")
+  });
+$("#b").click(function(){
+    $("button.ab").show();
+  });
+});
+function bold()
+            {
+                document.getElementById("p").style.color="red";
+
+
+            }
+</script>
+</head>
+<body>
+<table border="1"  style="border-collapse:collapse;text-align:center;">
+
+<tr><td colspan="2">
+<button id="c">*</button>
+<button id="b">This</button>
+<button onclick="bold()">replace</button><br><br>
+<button></button>
+<button>ok</button>
+<button>ok</button><br><br>
+<button id="d">tr even</button>
+<button id="e">tr odd</button>
+<button>ok</button><br><br>
+<button>ok</button>
+<button>ok</button>
+<button>ok</button>
+</td>
+                <td id="qq"> 
+<p id="p">It is K-2</p>
+<p> you are entering list</p>
+
+                    <ul type="bullets">
+                        <li>list1</li>
+                        <li>list2</li>
+                    </ul>
+ <ol type="I">
+                        <li>list1</li>
+                        <li>list2</li>
+                    </ol>
+
+<button id="ab">ok</button><br><br>
+<table id="f" border="1" style="border-collapse:collapse;text-align:center;">
+  <tr id="f1">
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Age</th>
+  </tr>
+  <tr id="f2">
+    <td>Jill</td>
+    <td>Smith</td>
+    <td>50</td>
+  </tr>
+  <tr id="f1">
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

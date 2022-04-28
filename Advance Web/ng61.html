@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 4</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  	var app=angular.module('myapp',[]);
+  	app.controller('cont1',function($scope) {
+$scope.isVisible=false;
+         $scope.isitVisible=false;
+          $scope.isthatVisible=false;
+        $scope.class1 = [
+            {Name:"david",rollno :"1003",emailid :"a@gmail.com"},
+            {Name:"Arun",rollno :"1001",emailid :"b@gmail.com"},
+            {Name:"neel",rollno :"1002",emailid :"c@gmail.com"},
+            {Name:"pandit",rollno :"1006",emailid :"d@gmail.com"},
+            {Name:"kancha",rollno :"1004",emailid :"e@gmail.com"},
+            {Name:"Rahul",rollno :"1005",emailid :"f@gmail.com"},
+            {Name:"munna",rollno :"1009",emailid :"g@gmail.com"},
+            {Name:"michael",rollno :"1008",emailid :"h@gmail.com"}
+
+        ]
+        $scope.Upper = function() { 
+            $scope.isVisible=true;
+            $scope.isitVisible=true;
+            $scope.isthatVisible=false;
+        }
+        $scope.Lower = function() { 
+            $scope.isVisible=false;
+            $scope.isitVisible=true;
+            $scope.isthatVisible=true;
+        }
+        $scope.d=function(){
+$scope.today=new Date();
+        };
+    });
+  </script>
+  <style type="text/css">
+  	table,td{
+  		border:1px solid black;
+  		padding:5px;
+  	}
+  	table{
+  		margin:10px 0px 0px 10px;
+  	}
+  </style>
+</head>
+<body>
+<div ng-app="myapp" ng-controller="cont1">
+<input type="text" ng-model="a" placeholder="type here to search" style="margin:10px 0px 0px 10px";>
+<br><br>
+<table>
+        <tr><td>S.no</td><td>Name</td><td>Roll No</td><td>Email</td></tr>
+        <tr ng-repeat="row in table | orderBy: 'Name'| filter: search">
+            <td>{{$index + 1}}</td>
+            <td ng-hide="isitVisible">{{row.Name}}</td>
+            <td ng-show="isVisible">{{row.Name | uppercase}}</td>
+            <td ng-show="isthatVisible">{{row.Name | lowercase}}</td>
+            <td>{{row.Roll_No}}</td>
+            <td>{{row.Email}}</td>
+        </tr>
+    </table>
+<br>
+<button class="btn btn-warning" ng-click="Upper()">Uppercase</button>
+<button class="btn btn-danger" ng-click="Lower()">Lowercase</button>
+<button class="btn btn-primary" ng-click="d()">Date</button><br><br>
+<p>Today the date is <b>{{ today | date}}</b></p>
+</div>
+</body>
+</html>

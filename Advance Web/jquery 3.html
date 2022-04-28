@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+   $("input").focus(function(){
+    $(this).css("background-color", "yellow");
+  });
+  $("input").blur(function(){
+    $(this).css("background-color", "blue");
+  });
+  $("#a").mouseenter(function(){
+    $("#a").fadeTo("3000",0.5);
+});
+  $("#a").dblclick(function(){
+    alert("you clicked twice");
+});
+  $("#b").mouseenter(function(){
+    $("#b").css ("color","blue");
+});
+  $("#c").mouseenter(function(){
+    $("#c").css ("color","pink");
+});
+   $("#c").mouseleave(function(){
+    $("#c").css ("color","gold");
+});
+
+  $("#f").click(function(){
+    $("#d").stop();
+  });
+   $("#e").click(function(){
+    $("#d").animate({left: '100px'}, 5000);
+  });
+});</script>
+</head>
+<body><div style="position:absolute;border:1px solid black;">
+<p id="a">This is Web Programming</p>
+	<p id="b">You are Learning <span id="c" style="color:gold;">Jquery</span> </p>
+<button id="e">Start</button>
+<button id="f">Ok</button>
+<p id="d" style="position:absolute;">HELLO</p>
+<input type="text">
+</div>
+</body>
+</html>

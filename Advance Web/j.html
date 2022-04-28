@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+	<style>
+		div{
+			  width: 320px;
+  padding: 10px;
+  border: 1px solid gray;
+  margin: 0;
+		}
+	</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#a").mouseenter(function(){
+    $("#a").css({"background-color": "yellow"});
+});
+         $("#a").mouseleave(function(){
+    $("#a").css({"background-color": "pink"});
+});
+  $("#b").click(function(){
+    $("td").empty();
+  });
+   $("#e").click(function(){
+  $("tr:even").css({"background-color": "lime"});
+   $("tr:odd").empty(); 
+  });
+   $("#c").click(function(){
+  $("tr").toggle().css({"background-color": "yellow" ,"font-size": "+3cm"});  
+  });
+  $("#d").click(function(){
+  $("#a4").css({ "font-size": "200%"});  
+  }); 
+  $("#g").click(function(){
+  $("#a4").remove();  
+  });  
+});
+</script>
+</head>
+<body>
+	<div id="a" height="100" width="100">
+		<button id="b">Empty</button>
+<button id="c">Slide Toggle</button><br><br>
+<button id="d">large</button>
+<button id="e">change color</button>
+<br><br>
+<button id="f">Dimensions</button>
+<button id="g">remove</button>
+</div>
+<table border="1" align="center" id="abc"> 
+        <tr id="a1"> 
+            <td colspan="2" rowspan="2">1</td> 
+            <td>3</td> 
+            <td>4</td> 
+        </tr> 
+        <tr id="a2"> 
+            <td>7</td> 
+            <td>8</td> 
+        </tr> 
+        <tr id="a3"> 
+            <td>9</td> 
+            <td>10</td> 
+            <td colspan="2" rowspan="2">15</td> 
+        </tr> 
+        <tr id="a4"> 
+            <td>13</td> 
+            <td>14</td> 
+        </tr> 
+    </table> 
+</body>
+</html>

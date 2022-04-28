@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<style>
+	table{
+		width:500px;
+ border-collapse: separate;
+  border-spacing: 15px;
+		height:200px;
+
+	}
+table, td {
+  
+  padding: 15px;
+  text-align:center;
+
+}
+</style>
+</head>
+<body>
+	<div ng-app="" ng-init="mycol='yellow';mycol1='orange';mycol2='pink';mycol3='brown';mycol4='white';mycol5='white'">
+		<table border=1 align="center" ng-model="mycol" style="border-color: {{mycol1}}">
+			<tr> <td colspan="2" ng-model="mycol" style="background-color: {{mycol}}">1</td>
+			<td colspan="1" ng-model="mycol1" style="background-color: {{mycol1}}">2</td>
+		<td colspan="2" ng-model="mycol2" style="background-color: {{mycol2}}">3</td></tr><tr>
+		<td colspan="2" ng-model="mycol3" style="background-color: {{mycol3}}">4</td>
+	<td colspan="1"  ng-model="mycol4" style="background-color: {{mycol4}} ">5</td>
+<td colspan="2"  ng-model="mycol5" style="background-color: {{mycol5}}" >6</td>
+</tr>
+	<tr><td colspan="8"><input type="number" ng-model="num1" placeholder="Input Number"></td></tr>
+		<tr><td colspan="8"><input type="number" ng-model="num2" placeholder="Input Number"></td></tr>
+		<tr><td >{{num1 + num2}}</td>
+			<td colspan="1">{{num1 - num2}}</td>
+			<td colspan="1">{{num1 * num2}}</td>
+			<td colspan="1">{{num1 / num2}}</td>
+		</tr>
+	</table>
+		
+	</div>
+</body>
+</html>
+

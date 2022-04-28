@@ -1,0 +1,50 @@
+<!doctypehtml>
+<html>
+<head>
+<style>
+#para:hover{
+	background-color:grey;
+}
+a:link{
+	border:1px solid ;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  text-decoration: none;
+}
+</style>
+</head>
+<body >
+	<table border="1">
+		<tr>
+			<td>Home</td><td id="para">About us</td><td>contact</td><td rowspan="2"></td></tr>
+			<tr><br><td><br>Name:  <input type="text"><br><br>Roll no:<input type="text"><br><br><a href="frame.html" target="_blank">submit</a></td>
+				<td><input type="button" value="div1" onclick="add()" ><br><br><input type="button" value="div2"  onclick="add1()"><br>
+				<br>	<input type="button" value="div3" onclick="remove()" ondblclick="add1()"></td>
+					<td id="p">This Is Assignment <div id="p1"></div></td></tr></table>
+					<script>
+						function add()
+						{
+							document.getElementById("p").innerHTML ="THIS IS ASSIGNMENT";
+							document.getElementById("p").style.font ="50px bold ";
+							document.getElementById("p").style.color="red";
+						}
+						function add1()
+						{
+							var a=document.createElement("img");
+							a.src ="a.jpg.jpg";
+							var l=document.getElementById("p1");
+							a.height="100";
+							a.width="100";
+						
+							l.appendChild(a);
+						}
+						function remove()
+{
+var list=document.getElementById("p1");
+list.removeChild(list.childNodes[0]);
+}
+					</script>
+				</body></html>
+

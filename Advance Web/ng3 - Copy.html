@@ -1,0 +1,105 @@
+<!Doctype html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<style>
+    .a{
+        margin-left:300px;
+    } 
+    select{
+        height:60px;
+        width:20%;
+        margin-left:40px;
+    }
+    .highlighted{
+        background-color:yellow;
+    }
+</style>
+<script>
+var app=angular.module('myapp',[]);
+		app.controller('angularcontrollernew', function($scope){
+			$scope.add=function()
+			{
+				
+             $scope.res=$scope.a+$scope.b;
+			};
+			$scope.sub=function()
+			{
+				$scope.res=$scope.a-$scope.b;
+			};
+			$scope.mul=function()
+			{
+				$scope.res=$scope.a*$scope.b;
+			};
+			$scope.div=function()
+			{
+				$scope.res=$scope.a/$scope.b;
+			};
+
+			$scope.isvisible=false;
+        $scope.abc = function(){
+           $scope.isvisible=$scope.isvisible=true;   
+        }
+        $scope.def = function(){
+           $scope.isvisible=$scope.isvisible=false;   
+        }
+
+
+		});
+	</script>    
+</head>
+<body>
+<div ng-app="myapp" 
+ng-init="mycol='pink';mycol1='black';mycol2='green';mycol3='blue';mycol4='orange';mycol5='darkblue'">
+<fieldset>
+<div ng-controller="angularcontrollernew">	
+<input type="number" ng-show="hii" ng-model="a" style="width:20%;height:30px"> 
+<button style="background-color: {{mycol}};width:10%;height:40px;margin-left:20px" ng-show="hii">$Scope</button>  
+<button  ng-show="hii" style="width:10%;height:40px;margin-left:20px;background-color:white" ng-click="abc()" ng-dblclick="def()">Directives</button>
+<br><br>
+<input type="number" ng-show="hii" ng-model="b" style="width:20%;height:30px">
+
+<button style="background-color: {{mycol1}};width:10%;height:40px;margin-left:20px;color:white" ng-show="hii">$Rootscope</button>
+<p class="a">{{Output}}</p>
+<br>
+<input type="checkbox" ng-model="hii"> 
+<button ng-click="add()" style="background-color:green;">+</button>
+		<button ng-click="sub()" style="background-color:lightblue;">-</button>
+		<button ng-click="mul()" style="background-color:orange;">*</button>
+		<button ng-click="div()" style="background-color:darkblue;">/</button>  
+<h3>The answer is {{res}}</h3><h1><span ng-show="isvisible" class="highlighted">Hello.<br>How are you?</span></h1>      
+</div>		
+<br><br>
+<button ng-click="count=count+1" ng-init="0" style="width:10%;height:40px;background-color:white">Count</button> 
+<select ng-model="myVar">
+  <option value="CSE">CSE
+  <option value="ECE">ECE
+  <option value="IT">IT
+</select>
+<p>{{count}}</p>
+<hr>
+<div ng-switch="myVar">
+  <div ng-switch-when="CSE">
+     <h1>CSE</h1>
+     <p style="color:red">I am From Computer science deptt..Arent you aware of that.</p>
+  </div>
+  <div ng-switch-when="ECE">
+     <h1>ECE</h1>
+     <p style="color:blue">I am From Electronics deptt..Arent you aware of that.</p>
+  </div>
+  <div ng-switch-when="IT">
+     <h1>IT</h1>
+     <p style="color:brown">I am IT Engineer.Dont mess with me.</p>
+  </div>
+  <div ng-switch-default>
+     <h1>Dropdown</h1>
+     <p>Select topic from the dropdown, to switch the content of this DIV.</p>
+  </div>
+</div>
+<hr>
+
+</fieldset> 
+<br>    
+</div>   
+ </body>    
+</html>

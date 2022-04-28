@@ -1,0 +1,21 @@
+1.How is database managed? Give advantages and disadvantages of Database management system.
+
+2. Compare the three record based data models. Which one is best and why?
+
+3.What do you understand by distributed database? Give the various advantages and disadvantages of distributed database Management System.
+
+4.Give the main idea about Data Integrity Rules
+
+Q5 Explain various types of Relational Algebra operations	.
+
+6.Contrast two tier and three tier Client/Server Architecture with examples.
+
+7.Design an ER schema for the application of University database, and draw an ER diagram for that schema. Specify Key attributes of each entity type and structural constraints on each relationship type. Make appropriate assumptions to make the specification complete.
+
+8.“ Uniqueness in a table can be applied with the help of primary Key and unique constraint.” List down difference between the both.
+
+9.Design an ER Schema for the application of Hospital database, and draw an ER diagram for that schema. Specify key attributes of each entity type, and structural constraints on each relationship type. Make appropriate assumptions to make the specification complete.
+
+10.“ It is required to separate each user’s view of database from the way the database is physically represented.” How this can be achieved by using different layers of DBMS architecture?
+
+11.

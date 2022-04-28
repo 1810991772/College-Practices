@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>   
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+   $("#a").mouseenter(function(){
+    $("#a").hide();
+});
+   $("#ab").click(function(){
+      $("#ab").html("<h1> you want to display heading</h1>");
+});
+    $("#b").mouseenter(function(){
+           $("#b").css("color","yellow");
+       });
+    $("#b").click(function(){
+           alert("this is 80%");
+       });
+     $("#b").mouseleave(function(){
+           $("#b").css("color","white");
+       });
+     $("#c").mouseenter(function(){
+           $("#c").css("color","yellow");
+       });
+    $("#c").click(function(){
+           alert("this is 20%");
+       });
+     $("#c").mouseleave(function(){
+           $("#c").css("color","white");
+       });
+     $("#d").click(function(){
+$("#d").html("I am In Jumbotron");    
+});
+});</script>  
+</head>
+<body>
+<div class="container">
+
+
+      <div class="row">
+   
+    <div class="col-sm-2" style="background-color: lightgrey;border:1px solid
+black;"><div class="progress" > <div id="b" class="progress-bar
+"style="width:80%"> 80% </div> </div> <div class="progress"> <div  id="c"
+class="progress-bar"style="width:20%"> 20% </div> </div> </div> <div
+class="col-sm-8" style="background-color: lightgrey;border:1px solid black;">
+<p id="a" >click on I will disappear</p> </div> <div class="col-sm-2"
+style="background-color: lightgrey;border:1px solid black;"> <div
+class="btn-group" > <button type="button" class="btn
+btn-success">home</button> <button type="button" class="btn btn-primary">about
+us</button> </div> </div> </div> <div class="row"> <div class="col-sm-2"
+style="background-color: lightgrey;border:1px solid black;"> <abbr
+title="CIRCLE-Image"><img src="C:\Users\Microsoft\Desktop\star.jpg" 
+align="left" class="img-circle" alt="Cinque Terre" width="70" height="36"
+></abbr>. <abbr title="ROUNDED-Image"><img align="right"
+src="C:\Users\Microsoft\Desktop\star.jpg" class="img-rounded" alt="Cinque
+Terre" width="70" height="36"></abbr> <br> <abbr title="Thumbnail-Image"> <img
+src="C:\Users\Microsoft\Desktop\star.jpg" class="img-thumbnail" alt="Cinque
+Terre" width="104" height="36"> </abbr> </div> <div class="col-sm-4"
+style="border:1px solid black;" align="center"> <div class="jumbotron
+text-primary"> <p id="d" align="center" style="border:1px solid black;">Write
+Something Here</p> </div> </div> <div class="col-sm-4"
+style="background-color: lightgrey;border:1px solid black;" align="center">
+<button type="button" class="btn  btn-borderless">1</button> <button
+type="button" class="btn  btn-borderless">2</button> <br> <button
+type="button" class="btn  btn-borderless">3</button> <button type="button"
+class="btn  btn-borderless">4</button> </div> <div class="col-sm-2"
+style="background-color: lightgrey;border:1px solid black;"> <table
+class="table table-dark table-stripped table-hover">
+    
+ <tr><td></td><td></td><td></td></tr>
+ <tr><td></td><td></td><td></td></tr>
+ <tr><td></td><td></td><td></td></tr>
+ <tr><td></td><td></td><td></td></tr>    
+</table>
+</div>
+</div>
+<div class="row"> <div class="col-sm-6"
+
+style="background-color: lightgrey;border:1px solid black;">
+
+<p id="ab"> you want to display heading</p>
+</div>
+<div class="col-sm-6"
+
+style="background-color: lightgrey;border:1px solid black;">
+
+</div>
+</div>
+</div>
+</body>
+</html>

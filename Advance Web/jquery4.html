@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <script>
+   $(document).ready(function(){
+       $("#a").animate({fontSize:'2em'},1000); 
+      $("input").focus(function(){
+         $("input").css("background-color","yellow").css("border-color","red"); 
+      });
+      $("#d").click(function(){
+         $("#z").css("background-color","blue"); 
+      });
+       $("#c").click(function(){
+           $("#z").fadeIn("Hello World!");
+       });
+       $("#e").mouseenter(function(){
+           $("#z").hide();
+       });
+       $("#f").click(function(){
+          $("#z").css("font-weight","Bold");
+       });
+       $("#h").click(function(){
+         alert("Text: " + $("#z").text());
+       });
+       $("#g").click(function(){
+         alert("HTML: " + $("#z").html());
+       });
+       $("#i").click(function(){
+           alert("Value: "+$("#b").val());
+       });
+       $("#j").click(function(){
+           $("#z").hide();
+       });
+       $("#j").dblclick(function(){
+           $("#z").show();
+       });
+       $("#k").focus(function(){
+           $("#z").css("color","yellow");
+       });
+;   }); 
+</script>   
+</head>
+    <body>
+    <table border="1" style="border-collapse:collapse;">
+    <tr>
+        <td>
+        <P id="a">This is HTML</P>
+            <input type="text" id="b" value="JQuery"><br><br>
+            <p id="z">Hello World<b>!!</b></p>
+            <button id="c">Keydown</button>
+            <button id="d">Keyup</button>
+            <button id="e">hide</button>
+            <button id="f">T1</button><br><br>
+            <button id="g">Html</button>
+            <button id="h">Text</button>
+            <button id="i">Value</button><br><br>
+            <button id="j">HC</button>
+            <button id="k">Focus</button>
+        </td>
+    </tr>    
+    </table>
+    </body>
+</html>

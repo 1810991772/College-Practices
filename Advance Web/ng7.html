@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<style>
+    table,th,td{
+        border: 1px solid grey;
+        padding:5px;
+        border-collapse: collapse;
+    }
+    input{
+        width:100%;
+    }
+</style>
+<script src="https://code.angularjs.org/1.6.9/angular-route.js"></script>
+<script src="https://code.angularjs.org/1.6.9/angular.min.js"></script>
+<script src="https://code.angularjs.org/1.6.9/angular.js"></script>
+<script src="/lib/bootstrap.js"></script>
+<script src="/lib/bootstrap.css"></script>
+<style type="text/css">
+    input{
+        width: 800px;
+    }
+</style>
+</head>
+<body>
+<div ng-app="DemoApp" ng-controller="DemoController">
+<fieldset>
+<br>
+<input type="text" ng-model="search" placeholder="Enter some text to search" />
+<br><br>
+    <table>
+        <tr><td>S.no</td><td>Name</td><td>Roll No</td><td>Email</td></tr>
+        <tr ng-repeat="row in table | orderBy: 'Name'| filter: search">
+            <td>{{$index + 1}}</td>
+            <td ng-hide="isitVisible">{{row.Name}}</td>
+            <td ng-show="isVisible">{{row.Name | uppercase}}</td>
+            <td ng-show="isthatVisible">{{row.Name | lowercase}}</td>
+            <td>{{row.Roll_No}}</td>
+            <td>{{row.Email}}</td>
+        </tr>
+    </table>
+<br>
+<button ng-click="Upper()">Uppercase</button>
+<button ng-click="Lower()">Lowercase</button>
+<button ng-click="abc()">Date</button>
+<p><b>{{ today | date}}</b></p>
+</fieldset>
+</div>
+<script type="text/javascript">
+    var app = angular.module('DemoApp',[]);
+    app.controller('DemoController',function($scope) {
+        $scope.isVisible=false;
+         $scope.isitVisible=false;
+          $scope.isthatVisible=false;
+        $scope.table = [
+            {Name:"Arun",Roll_No:"1810991799",Email:"Arun.cse18@chitkara.edu.in"},
+            {Name:"Anil",Roll_No:"1810991795",Email:"Anil.cse18@chitkara.edu.in"},
+            {Name:"Ramesh",Roll_No:"1810991781",Email:"Ramesh.cse18@chitkara.edu.in"},
+            {Name:"Raja",Roll_No:"1810991798",Email:"Raja.cse18@chitkara.edu.in"},
+            {Name:"Vaibhav",Roll_No:"1810991782",Email:"Vaibhav.cse18@chitkara.edu.in"}
+        ]
+        $scope.abc=function(){
+            $scope.today = new Date();
+        }
+         $scope.Upper = function() { 
+            $scope.isVisible=true;
+            $scope.isitVisible=true;
+            $scope.isthatVisible=false;
+        }
+        $scope.Lower = function() { 
+            $scope.isVisible=false;
+            $scope.isitVisible=true;
+            $scope.isthatVisible=true;
+        }
+    });
+</script>
+</body>
+</html>

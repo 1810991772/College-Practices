@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css"> .span2{
+  	margin-top:100px;
+  	margin-left:400px;
+  }
+  .p{
+  	border: 1px solid red;
+  }
+
+  </style>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+ <script type="text/javascript">
+  	var app=angular.module('myngapp',[]);
+  	app.controller('ctrl',function($scope){
+  		$scope.cuttext = false;
+$scope.copytext = false;
+$scope.pasttext = false;
+$scope.change=function(){
+$scope.co="yellow";
+};
+$scope.change1=function(){
+$scope.co1="green";
+};
+$scope.change3=function(){
+$scope.co="orange";
+};
+
+$scope.change5=function(){
+$scope.co="purple";
+};
+$scope.myFunc = function(myE){
+		$scope.x = myE.clientX;
+		$scope.y = myE.clientY;
+	}
+$scope.fun=function(){
+
+$scope.myvar1=true;
+$scope.myvar2=true;
+};
+$scope.fun1=function(){
+$scope.myvar1=false;
+$scope.myvar2=false;
+};
+  	
+			$scope.add=function()
+			{
+				
+             $scope.res=$scope.a+$scope.b;
+			};
+			$scope.sub=function()
+			{
+				$scope.res=$scope.a-$scope.b;
+			};
+			$scope.mul=function()
+			{
+				$scope.res=$scope.a*$scope.b;
+			};
+			$scope.div=function()
+			{
+				$scope.res=$scope.a/$scope.b;
+			};
+
+		});
+  </script>
+ </head>
+  <body>
+  	<div ng-app="myngapp" ng-controller="ctrl"><table class="span2" border="1" align="center"><tr><td>
+  	<button ng-paste="pasttext=true">ng-cut</button><br>
+			<button ng-click="mystyle={'font-weight':'normal'}">ng-change</button><br>
+			<button ng-focus="style={'background-color':'cyan'}" >ng-focus</button><br>
+				<button value="set background" ng-keyup="myStyle={'background-color':'yellow'}">keyUp</button><br>
+				<button>Keydown</button><br>
+				<button ng-mouseenter="change3()">mouseenter</button><br>
+</td>
+<td>
+	<textarea rows="4" cols="30" style="border:2px solid red;" class="textarea1"  ng-style="style">{{ x + ',' + y }}   {{count}} {{pastetext
+	}}</textarea>
+	<br><p class="b" rows="6"cols="30" style="border:2px solid red;"  ng-cut="cuttext=true" ng-hide="myvar1"  ng-mousemove="myFunc($event)"><b ng-style="mystyle">Angular js </b>is javascript based open source <br>front-end web framework mainly maintained<br> by google and by community of individuals <br>and corporations to address many of the <br>challanges encountered in developing <br>single-page applications.</p><div ng-show="myvar2">
+					<label>Enter first number</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" ng-model="a"><br><br>
+    <label>Enter second number</label>&nbsp;<input type="number" ng-model="b"><br><br>
+   
+		<button ng-click="add()" style="background-color:green;">+</button>
+		<button ng-click="sub()" style="background-color:lightblue;">-</button>
+		<button ng-click="mul()" style="background-color:orange;">*</button>
+		<button ng-click="div()" style="background-color:darkblue;">/</button>
+		<h3>The answer is {{res}}</h3><br>
+				
+</div><br><textarea rows="4" cols="30" style="border:2px solid red;background-color:{{co}};color:{{co1}}" ng-style="myStyle" ng-blur="change()" ng-focus="change1()"></textarea></td>
+<td>
+				<button >mouseover </button><br>
+	<button ng-mouseup="count = count + 1" ng-init="count=0">mouseup</button><br>
+	<button ng-mouseleave="change5()">mouseleave</button><br>
+	<button ng-mousedown="count = count + 1" ng-init="count=0">mousedown</button><br>
+	<button ng-click="fun()" ng-dblclick="fun1()">mouseclick</button>
+</td>
+</tr>
+</table>
+</div>
+  </body>
+</html>

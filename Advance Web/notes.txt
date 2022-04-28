@@ -1,0 +1,268 @@
+jQuery is a lightweight, "write less, do more", JavaScript library.
+
+The purpose of jQuery is to make it much easier to use JavaScript on your website.
+
+jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that you can call with a single line of code.
+
+
+Cdn[content Deliver Network] is a system of distributive servers that deliver pages and other web content through a user based on geographic location of the user
+the origin of the webpage and the content delivered server.
+
+google cdn
+syntax:
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+
+$(selector).action()
+->1) $: define/excess jquery 
+2) selector: selectors allow you to select and manipulate HTML element(s).
+3) action:
+
+syntax:
+
+$(document).ready(function(){
+
+
+
+
+  }); 
+
+prevents the code from running before the document is finish loading
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").hide();
+  });
+});
+</script>
+</head>
+<body>
+
+<h2>Hello</h2>
+<p>hide this element</p>
+
+<button>ok</button>
+
+</body>
+</html>
+
+
+
+
+
+  EFFECT  Methods:
+
+1)Display: hide(),show(),toggle();
+
+2)fading: fadeIn(),fadeOut(),fadeToggle(),fade To(speed,opacity,callback);.
+
+3)slide: slideDown(),slideUp(),slideToggle(). 
+
+
+
+
+
+
+10/1/2020
+
+selectors examples::
+More Examples of jQuery Selectors
+Syntax	Description	Example
+$("*")	Selects all elements	
+$(this)	Selects the current HTML element	
+$("p.intro")	Selects all <p> elements with class="intro"	
+$("p:first")	Selects the first <p> element	
+$("ul li:first")	Selects the first <li> element of the first <ul>	
+$("ul li:first-child")	Selects the first <li> element of every <ul>	
+$("[href]")	Selects all elements with an href attribute	
+$("a[target='_blank']")	Selects all <a> elements with a target attribute value equal to "_blank"	
+$("a[target!='_blank']")	Selects all <a> elements with a target attribute value NOT equal to "_blank"	
+$(":button")	Selects all <button> elements and <input> elements of type="button"	
+$("tr:even").css ("background-color","red")	Selects all even <tr> elements	
+$("tr:odd")	Selects all odd <tr> elements.
+
+
+
+15/1/2020
+
+jQuery Animations - The animate() Method
+The jQuery animate() method is used to create custom animations.
+
+Syntax:
+
+$(selector).animate({params},speed,callback);
+The required params parameter defines the CSS properties to be animated.
+
+Example :
+$("button").click(function(){
+  $("div").animate({
+    left: '250px',
+    opacity: '0.5',
+    height: '150px',
+    width: '150px'
+  });
+}); 
+
+
+
+jQuery stop() Method ::
+The jQuery stop() method is used to stop an animation or effect before it is finished.
+
+The stop() method works for all jQuery effect functions, including sliding, fading and custom animations.
+
+Syntax:
+
+$(selector).stop(stopAll,goToEnd);
+The optional stopAll parameter specifies whether also the animation queue should be cleared or not. Default is false, which means that only the active animation will be stopped, allowing any queued animations to be performed afterwards.
+
+All the different visitors' actions that a web page can respond to are called events.
+
+
+Mouse Events     	Keyboard Events	        Form Events	   Document/Window Events
+click	                keypres			submit		   load
+dblclick	        keydown			change		   resize
+mouseenter		keyup			focus	           scroll
+mouseleave	 				blur		   unload
+
+focus: event handles a function focuses to a html form field and blur:attaches an event handler function to an HTML form field, function is executed when the form field loses focus, function is executed when the form field loses focus:
+
+
+
+
+
+17/1/2020
+::
+
+Get Content - text(), html(), and val()
+Three simple, but useful, jQuery methods for DOM manipulation are:
+
+text() - Sets or returns the text content of selected elements
+html() - Sets or returns the content of selected elements (including HTML markup)
+val() - Sets or returns the value of form fields.
+
+The following example demonstrates how to get content with the jQuery text() and html() methods:
+
+Example::
+$("#btn1").click(function(){
+  alert("Text: " + $("#test").text());
+});
+$("#btn2").click(function(){
+  alert("HTML: " + $("#test").html());
+});
+
+The following example demonstrates how to get the value of an input field with the jQuery val() method:
+
+Example::
+$("#btn1").click(function(){
+  alert("Value: " + $("#test").val());
+})
+
+
+Set Content 
+
+
+- text(), html(), and val()
+We will use the same three methods from the previous page to set content:
+
+text() - Sets or returns the text content of selected elements
+html() - Sets or returns the content of selected elements (including HTML markup)
+val() - Sets or returns the value of form fields
+The following example demonstrates how to set content with the jQuery text(), html(), and val() methods:
+
+Example
+$("#btn1").click(function(){
+  $("#test1").text("Hello world!");
+});
+$("#btn2").click(function(){
+  $("#test2").html("<b>Hello world!</b>");
+});
+$("#btn3").click(function(){
+  $("#test3").val("Dolly Duck");
+});
+
+
+
+
+A Callback Function for text(), html(), and val()
+All of the three jQuery methods above: text(), html(), and val(), also come with a callback function. The callback function has two parameters: the index of the current element in the list of elements selected and the original (old) value. You then return the string you wish to use as the new value from the function.
+
+The following example demonstrates text() and html() with a callback function:
+
+Example
+$("#btn1").click(function(){
+  $("#test1").text(function(i, origText){
+    return "Old text: " + origText + " New text: Hello world!
+    (index: " + i + ")";
+  });
+});
+
+$("#btn2").click(function(){
+  $("#test2").html(function(i, origText){
+    return "Old html: " + origText + " New html: Hello <b>world!</b>
+    (index: " + i + ")";
+  });
+});
+
+
+
+21/`1/2020
+
+
+jQuery Manipulating CSS
+jQuery has several methods for CSS manipulation. We will look at the following methods:
+
+addClass() - Adds one or more classes to the selected elements
+removeClass() - Removes one or more classes from the selected elements
+toggleClass() - Toggles between adding/removing classes from the selected elements
+css() - Sets or returns the style attribute
+
+
+
+jQuery addClass() Method
+The following example shows how to add class attributes to different elements. Of course you can select multiple elements, when adding classes:
+
+Example
+$("button").click(function(){
+  $("h1, h2, p").addClass("blue");
+  $("div").addClass("important");
+});
+
+
+
+jQuery - Dimensions
+With jQuery, it is easy to work with the dimensions of elements and browser window.
+
+jQuery Dimension Methods
+jQuery has several important methods for working with dimensions:
+
+width()
+height()
+innerWidth()
+innerHeight()
+outerWidth()
+outerHeight()
+jQuery Dimensions
+jQuery Dimensions
+
+jQuery width() and height() Methods
+The width() method sets or returns the width of an element (excludes padding, border and margin).
+
+The height() method sets or returns the height of an element (excludes padding, border and margin).
+
+The following example returns the width and height of a specified <div> element:
+
+Example
+$("button").click(function(){
+  var txt = "";
+  txt += "Width: " + $("#div1").width() + "</br>";
+  txt += "Height: " + $("#div1").height();
+  $("#div1").html(txt);
+});

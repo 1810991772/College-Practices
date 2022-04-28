@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Controller And Array</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    
+</head>
+<body ng-app="myApp" ng-controller="myController">
+    <div class="row">
+        <div class="col-lg-6">
+            <input type="text" ng-disabled="true" value="I am disabled"> <br>
+            <input type="text" ng-readonly="true" value="Hey! Readonly">
+
+            <h2> Do you want the content?</h2> 
+            <ul ng-if="display" ng-repeat="x in records">
+                <li> {{ x }} </li>
+            </ul>  
+
+            <input type="checkbox" ng-model="display" >Click Me!
+            <br>
+        </div>
+        <div class="col-lg-6">
+            
+            <select ng-model="choice">
+            <option value="cse">CSE
+            <option value="ece">ECE
+            <option value="me">ME
+            </select>
+
+            <div class="jumbotron">
+                <h3>
+                    Hey There! I belong to
+                    <span ng-switch="choice">
+                        <span ng-switch-when="cse">
+                            <span style="border: 1px solid black;"> CSE</span>
+                        </span>
+                        <span ng-switch-when="ece">
+                            <span style="background-color: blue;"> ECE</span>
+                        </span>
+                        <span ng-switch-when="me">
+                            <span style="background-color: red;"> ME</span>
+                            
+                        </span>
+                    </span>
+                    Dept
+                </h3>
+            </div>
+            
+            <div class="color-me"></div>
+        </div>
+    </div>    
+
+    <script>
+        var app=angular.module('myApp',[]);
+        app.controller('myController', function ($scope) {
+           $scope.records = [
+               "CSE",
+               "ECE",
+               "ME"
+           ];
+           $scope.styling="";
+        });
+        app.directive("colorMe", function (){
+            return{
+                restrict : 'C',
+                template : '<h1 style="background-color: yellow;"> I am a directive </h1>'
+            }
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+	<style>
+		ul{
+			display:none;
+		}
+	</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#r").click(function(){
+$("#p").html("This is <b>Jquery</b> add");    
+});
+$("#a").click(function(){
+$("#x").text("Jquery .html Assignment");    
+});
+$("#b").click(function(){
+	
+$("#z").val($("#p").text());    
+});
+$("#c").click(function(){
+$("#abc").append("<img src='a.jpg.jpg' />");    
+});
+$("#d").click(function(){
+$("#q").toggle();    
+});
+$("#e").click(function(){
+$("#g").text("javascript");    
+});
+});
+</script>
+</head>
+<body>
+<table border="1">
+<tr>
+<td rowspan="2">
+<button id="r">bold</button>
+<button id="a">html</button>
+<button id="b">p value</button><br>
+<button id="c">Image</button><br>
+<button id="d">list</button>
+<button id="e">change li</button>
+</td>
+<td>
+<p id="p">This is Jquery add</p>
+<p id="x">Jquery Asiignment</p>
+<ul id="q">
+<li id="g">jquery
+<li id="e">list
+</ul>
+<input type="text" id="z" value="hello">
+<div id="abc" height="100" width="100"></div>
+</td>
+</tr>
+</table>
+</body>
+</html>

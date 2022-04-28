@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#r").click(function(){
+$("#p").fadeOut();
+$("#q").fadeOut();
+$("#n").fadeOut();
+$("#s").fadeOut();    
+});
+$("#t").click(function(){
+$("#s").fadeIn();
+});
+$("#u").click(function(){
+$("#q").toggle();
+$("#n").toggle();    
+});
+$("#v").click(function(){
+$("#e").hide();
+$("#f").hide();
+});
+$("#w").click(function(){
+$("#g").hide();
+$("#h").hide();
+});
+$("#a").click(function(){
+$("*#b").css("background-color","lime");
+});
+$("#c").click(function(){
+$("*#d").css("background-color","Gold");
+});
+$("#abc").click(function(){
+$("*#nnn").css("color","red");
+});
+});
+function k()
+{document.getElementById("nnn").innerHTML="This is K-2";
+}
+</script>
+</head>
+<body>
+<table border="1">
+<tr>
+<td rowspan="2">
+<button id="r">*</button>
+<button id="t">this</button>
+<button onclick="k()">replace</button><br>
+<button id="u">list1</button>
+<button>href</button>
+<button id="abc">Color</button><br>
+<button id="v">list2</button>
+<button id="a">tr even</button><br>
+<button id="w">list3</button>
+<button id="c">tr odd</button>
+</td>
+<td>
+<p id="p">
+<span id="nnn">This is K1.</span><br>You are entering list<br></p>
+<ul id="q">
+<li id="g">L1
+<li id="e">L2
+</ul>
+<ol type="I" id="n">
+<li id="h">Tea
+<li id="f">Coffee
+</ol>
+<button id="s">OK</button>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<table border="1">
+<tr id="d">
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr id="b">
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+</tr>
+<tr id="d">
+<td>+</td>
+<td>-</td>
+<td>*</td>
+<td>/</td>
+</tr>
+<tr id="b">
+<td>@</td>
+<td>#</td>
+<td>$</td>
+<td>%</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

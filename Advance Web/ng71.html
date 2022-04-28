@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 5</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script>
+  var app = angular.module("myapp", []);
+app.controller("mycont", function($scope) {
+  $scope.records = [
+    "CSE",
+    "ECE",
+    "ME",
+  ]
+});
+app.directive('ngCustom',function(){
+return{ template:'<h2 style="background-color:yellow;">I am a directive you know who am i!!!</h2>'
+}
+});
+</script>
+<style type="text/css">
+	.cust{
+		margin:0px 0px 0px 700px;
+	}
+</style>
+</head>
+<body>
+<div ng-app="myapp" ng-controller="mycont" style="margin-left:20px;margin-top:20px;">
+	<input type="text" ng-readonly="a1" value ="readonly"><br><br>
+	<input type="text" value="disabled" disabled ><br><br>
+	<h2>Do You Want Content?</h2>
+	<input type="checkbox" ng-model="a1"><h3 ng-repeat="x in records" ng-show="a1">{{x}}</h3>
+<select ng-model="drop">
+	<option value="CSE">CSE</option>
+	<option value="ECE">ECE</option>
+	<option value="ME">ME</option> 
+</select><br><br>
+<div class="jumbotron" style="margin-top:-180px;width:50%;margin-left:700px;">
+<div ng-switch="drop">
+	<div ng-switch-when="CSE">
+		<h3 style="background-color:blue;color:lightblue;">Hey there I belong to CSE department.</h3>
+	</div>
+	<div ng-switch-when="ECE">
+		<h3 style="background-color:black;color:white;">Hey there I belong to ECE department.</h3>
+	</div>
+	<div ng-switch-when="ME">
+		<h3 style="background-color:red;color:white;">Hey there I belong to ME department.</h3>
+	</div>
+</div>
+</div>
+<div ng-custom="" class="cust"></div>
+</div>
+</body>
+</html>

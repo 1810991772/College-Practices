@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<body>
+<ul id="p">
+<li>hello
+<li>hi
+	<li> taj
+		<li> mahal
+</ul>
+<br>
+<input type="button" onclick="add()" value="add">
+<input type="button" onclick="remove()" value="remove">
+<input type="button" onclick="replace()" value="replace">
+<script>
+function add()
+{var a = document.createElement("li");
+
+a.textContent ="i am new element";
+var list=document.getElementById("p");
+list.appendChild(a);
+//list.insertBefore(a,list.childNodes[3]);
+document.getElementById("p").style.border="7px solid pink";
+
+}
+function remove()
+{
+var list=document.getElementById("p");
+list.removeChild(list.childNodes[3]);
+}
+function replace()
+{
+var rep=document.createElement("li");
+rep.textContent="replaced you";
+var list=document.getElementById("p");
+list.replaceChild(rep,list.firstElementChild);
+}
+</script>
+</body>
+</html>

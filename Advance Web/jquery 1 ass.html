@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#p1").click(function(){
+    $("#b").toggle();
+    $("#c").toggle();
+  });
+  $("#p2").click(function(){
+    $("#b").fadeToggle();
+  });
+  $("#p3").click(function(){
+    $("#c").slideToggle();
+  });
+});
+</script>
+</head>
+<body>
+
+<button id="p1">1</button><p id="a">this is for display.</p><br><br>
+<button id="p2">2</button><p id="b">this is for Fading.</p><br><br>
+<button id="p3">3</button><p id="c">this is for Sliding.</p><br><br>
+</body>
+</html>

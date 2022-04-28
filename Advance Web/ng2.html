@@ -1,0 +1,24 @@
+<!Doctype HTML>
+<html>
+<head>
+<title></title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body> 
+<div ng-app="" ng-init="mycol='orange'">    
+<fieldset ng-model="mycol" style="border-color: {{mycol}}">
+<br>
+<br>    
+<center>First Name <input type="text"  ng-model="Name" ng-model="mycol" style="border-color: {{mycol}}"></center><br><br>
+<center>Last Name <input type="text"   ng-model="lastName" ng-model="mycol" style="border-color: {{mycol}}"></center><br><br>
+<center style="margin-right:200px">Name {{Name + lastName}}</center>    
+<br><br>    
+</fieldset> 
+<br>    
+Name: <input type="text" ng-model="col1">
+Last Name: <input type="text" ng-model="col2" >
+<br>    
+<h1>Hello {{col1 + "." + col2}}!</h1>
+</div>
+</body>
+</html>
